@@ -1,0 +1,9 @@
+<% @contestants.each do |contestant| %>
+<div id="contestant-section-<%= contestant.id %>" >
+    <h4>Name: <%= link_to "#{contestant.name}", "/contestants/#{contestant.id}"%></h4>
+    <p>Age: <%= contestant.age %></p>
+    <p>Hometown: <%= contestant.hometown %></p>
+    <% end %>
+  </div>
+
+
