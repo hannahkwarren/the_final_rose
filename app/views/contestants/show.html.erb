@@ -5,6 +5,6 @@
 
 <ul>
   <% @contestant.outings.each do |outing| %>
-    <li><%= outing.name %></li>
+    <li><%= link_to "#{outing.name}", "/outings/#{outing.id}" %></li>
     <% end %>
   </ul>

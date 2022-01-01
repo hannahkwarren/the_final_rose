@@ -27,16 +27,8 @@ RSpec.describe "Contestant Show Page", type: :feature do
     expect(page).to have_content("Hiking")
     expect(page).to have_content("Fishing")
 
-    
-  # I also see a list of names of the outings that this contestant has been on while on the show.
-  # (e.g.
-  #                         Ben Higgins
-  # Season 20 - No wait, THIS is the most dramatic season yet
-
-  # Outings: Kickball
-  #         Hot Springs
-  #         Helicopter Ride
-  # )
-  # When I click on an outing name, I'm taken to that outings show page
+    click_link("Hiking")
+    expect(current_path).to eq("/outings/#{@outing1.id}")
+  
   end
 end
