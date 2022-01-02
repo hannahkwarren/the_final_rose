@@ -11,4 +11,6 @@ class Contestant < ApplicationRecord
   def contestants_season_descr
     bachelorette.season_description
   end
+
+  
 end
