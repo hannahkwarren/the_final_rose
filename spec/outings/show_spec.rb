@@ -28,4 +28,5 @@ RSpec.describe "Outing show page", type: :feature do
     expect(page).to have_content("Contestants: Ryan Immoral, Brad Dull")
   end
 
+
 end

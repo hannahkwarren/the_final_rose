@@ -12,5 +12,11 @@ class Contestant < ApplicationRecord
     bachelorette.season_description
   end
 
-  
+  def self.average_age 
+    average(:age).round
+  end
+
+  def self.hometowns_by_season
+    distinct.pluck(:hometown)
+  end
 end

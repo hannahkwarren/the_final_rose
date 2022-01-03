@@ -29,6 +29,7 @@ RSpec.describe "Contestant Show Page", type: :feature do
 
     click_link("Hiking")
     expect(current_path).to eq("/outings/#{@outing1.id}")
-  
   end
+
+  
 end

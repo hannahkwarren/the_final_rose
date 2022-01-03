@@ -32,25 +32,13 @@ RSpec.describe "Bachelorette Show Page", type: :feature do
     expect(page).to_not have_content("Arnie Insufferable")
   end
 
-  it "has contestant details at the bachelorette contestants page and links to the contestant show page" do
+  
+  it "shows the average age of all of a bachelorette's contestants" do
+  
+    visit "/bachelorettes/#{@bach1.id}"
 
-    visit "/bachelorettes/#{@bach1.id}/contestants"
-
-    within("#contestant-section-#{@ryan.id}") do
-      expect(page).to have_content("Age: 32")
-      expect(page).to have_content("Hometown: Nowhere, IL")
-    end
-
-    within("#contestant-section-#{@brad.id}") do
-      expect(page).to have_content("Age: 30")
-      expect(page).to have_content("Hometown: Constipation, PA")
-    end
-
-    click_link("Ryan Immoral")
-
-    expect(current_path).to eq("/contestants/#{@ryan.id}")
-  end
+    expect(page).to have_content("Average Contestant Age: 31")
+  end 
 
   
-
 end

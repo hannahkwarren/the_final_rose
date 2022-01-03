@@ -6,4 +6,9 @@
     <% end %>
   </div>
 
+<p><%= @bachelorette.name %>'s Contestants are from these hometowns: 
+  <ul><% @contestants.hometowns_by_season.each do |town| %>
+    <li><%= town %></li>
+  </ul>
+    <% end %></p>
 
